@@ -1,7 +1,7 @@
 package checkers.inference;
 
+import org.checkerframework.common.subtyping.qual.Unqualified;
 import org.checkerframework.framework.qual.PolymorphicQualifier;
-import org.checkerframework.framework.qual.Unqualified;
 import org.checkerframework.framework.type.QualifierHierarchy;
 import org.checkerframework.framework.util.MultiGraphQualifierHierarchy;
 import org.checkerframework.javacutil.PluginUtil;
@@ -66,7 +66,7 @@ public class InferenceQualifierHierarchy extends MultiGraphQualifierHierarchy {
         if (tops.size() != 2) {
             throw new BugInCF(
                     "There should be only 2 top qualifiers "
-                 + "( org.checkerframework.framework.qual.Unqualified, checkers.inference.qual.VarAnnot ).\n"
+                 + "( org.checkerframework.common.subtyping.qual.Unqualified, checkers.inference.qual.VarAnnot ).\n"
                  + "Tops found ( " + InferenceUtil.join(tops) + " )"
             );
         }
