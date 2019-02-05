@@ -354,8 +354,8 @@ public class InferenceAnnotatedTypeFactory extends BaseAnnotatedTypeFactory {
         inferencePoly.replacePolys(methodInvocationTree, method);
 
         if (methodInvocationTree.getKind() == Tree.Kind.METHOD_INVOCATION &&
-TreeUtils.isMethodInvocation(
-                        (MethodInvocationTree) tree, objectGetClass, processingEnv)) {
+            TreeUtils.isMethodInvocation(
+                (MethodInvocationTree) tree, objectGetClass, processingEnv)) {
             adaptGetClassReturnTypeToReceiver(method, receiverType);
         }
         return mType;
